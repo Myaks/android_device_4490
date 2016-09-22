@@ -1,5 +1,5 @@
-# Samsung Galaxy Star
-Device Tree for Samsung Galaxy Star CyanogenMod 11
+# Fly IQ4490
+(source Device Tree for Samsung Galaxy Star CyanogenMod 11)
 
 ## Pre-requisites
 * CyanogenMod 11 source and building tools and all.
