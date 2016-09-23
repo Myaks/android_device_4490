@@ -17,18 +17,18 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Include sprd-common related aspects
-$(call inherit-product, device/samsung/sprd-common/device.mk)
+$(call inherit-product, device/fly/sprd-common/device.mk)
 
 ## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/mint2g/mint2g-vendor.mk)
+$(call inherit-product-if-exists, vendor/fly/nano4/nano4-vendor.mk)
 
 # Use the Dalvik VM specific for devices with 512 MB of RAM
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
 ## overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/mint2g/overlay
+DEVICE_PACKAGE_OVERLAYS += device/fly/nano4/overlay
 
-LOCAL_PATH := device/samsung/mint2g
+LOCAL_PATH := device/fly/nano4
 
 # Softlink sh
 $(shell mkdir -p $(LOCAL_PATH)/../../../out/target/product/mint/recovery/root/system/bin)
@@ -36,11 +36,11 @@ $(shell ln -sf -t $(LOCAL_PATH)/../../../out/target/product/mint/recovery/root/s
 
 # Init Files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.sp8810.rc:root/init.sp8810.rc \
-    $(LOCAL_PATH)/rootdir/init.sp8810.usb.rc:root/init.sp8810.usb.rc \
-    $(LOCAL_PATH)/rootdir/fstab.sp8810:root/fstab.sp8810 \
+    $(LOCAL_PATH)/rootdir/init.sc7710g.rc:root/init.sc7710g.rc \
+    $(LOCAL_PATH)/rootdir/init.sc7710g.usb.rc:root/init.sc7710g.usb.rc \
+    $(LOCAL_PATH)/rootdir/fstab.sc7710g:root/fstab.sc7710g \
     $(LOCAL_PATH)/rootdir/lpm.rc:root/lpm.rc \
-    $(LOCAL_PATH)/rootdir/ueventd.sp8810.rc:root/ueventd.sp8810.rc \
+    $(LOCAL_PATH)/rootdir/ueventd.sc7710g.rc:root/ueventd.sc7710g.rc \
     $(LOCAL_PATH)/rootdir/bin/charge:root/bin/charge \
     $(LOCAL_PATH)/rootdir/modem_control:root/modem_control \
     $(LOCAL_PATH)/rootdir/bin/poweroff_alarm:root/bin/poweroff_alarm \
@@ -115,5 +115,5 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 $(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 320
-TARGET_SCREEN_WIDTH := 240
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 480
