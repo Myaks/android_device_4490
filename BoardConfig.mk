@@ -20,9 +20,9 @@
 # definition file).
 #
 
--include device/samsung/sprd-common/BoardConfigCommon.mk
+-include device/fly/sprd-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := mint,mint2g,GT-S5282,GT-S5280
+TARGET_OTA_ASSERT_DEVICE := nano,nano4
 
 # Architecture
 TARGET_ARCH := arm
@@ -33,21 +33,21 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_CPU_SMP := true
-#TARGET_CORTEX_CACHE_LINE_32 := true
+TARGET_CORTEX_CACHE_LINE_32 := true
 
 # Board
-TARGET_BOOTLOADER_BOARD_NAME := mint2g
+TARGET_BOOTLOADER_BOARD_NAME := sp7710g2
 
 # Platform
-TARGET_BOARD_PLATFORM := sc8810
+TARGET_BOARD_PLATFORM := sc7710
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-TARGET_KERNEL_SOURCE := kernel/samsung/mint2g
-TARGET_KERNEL_CONFIG := cyanogenmod_mint_defconfig
+TARGET_KERNEL_SOURCE := kernel/fly/nano4
+TARGET_KERNEL_CONFIG := cyanogenmod_nano_defconfig
 BOARD_KERNEL_IMAGE_NAME := Image
 
 # Partitions
@@ -65,9 +65,9 @@ DEVICE_RESOLUTION := 240x320
 BOARD_LDPI_RECOVERY := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := "<font_7x16.h>"
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/sprd-common/recovery/recovery_keys.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/fly/sprd-common/recovery/recovery_keys.c
 BOARD_HAS_NO_MISC_PARTITION := true
-TARGET_RECOVERY_FSTAB := device/samsung/mint2g/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/fly/nano4/recovery.fstab
 BOARD_SUPPRESS_EMMC_WIPE := true
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 
@@ -81,11 +81,11 @@ HWUI_COMPILE_FOR_PERF := true
 # Camera
 COMMON_GLOBAL_CFLAGS += -DMR0_CAMERA_BLOB
 NEEDS_MEMORYHEAPION := true
-CAMERA_SUPPORT_SIZE := 2M
+CAMERA_SUPPORT_SIZE := 3M
 TARGET_BOARD_NO_FRONT_SENSOR := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/mint2g/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/fly/nano4/bluetooth
 
 
 # Connectivity - Wi-Fi
@@ -112,11 +112,11 @@ BOARD_HAVE_SAMSUNG_WIFI          := true
 COMMON_GLOBAL_CFLAGS += -DMR0_AUDIO_BLOB
 
 # RIL
-BOARD_RIL_CLASS += ../../../device/samsung/mint2g/ril/
+BOARD_RIL_CLASS += ../../../device/fly/nano4/ril/
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 320
-TARGET_SCREEN_WIDTH := 240
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 480
 
 # Host specific
 PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
