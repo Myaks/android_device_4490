@@ -1,7 +1,7 @@
 #!/bin/sh
 
-VENDOR=samsung
-DEVICE=mint
+VENDOR=fly
+DEVICE=nano4
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 
