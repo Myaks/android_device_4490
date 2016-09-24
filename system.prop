@@ -2,8 +2,8 @@
 # system.prop for mint
 #
 
-ro.sf.lcd_density=120
-ro.product.hardware=SS
+ro.sf.lcd_density=240
+ro.product.hardware=V1.0.0
 
 ro.lcd_min_brightness=20
 
