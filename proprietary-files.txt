@@ -51,11 +51,11 @@ vendor/firmware/fw_bcmdhd_p2p.bin
 
 # Lights/Sensors
 bin/ss_daemon
-lib/hw/sensors.sc8810.so
+lib/hw/sensors.sc7710g.so
 
 # Display
-lib/hw/gralloc.sc8810.so
-lib/hw/hwcomposer.sc8810.so
+lib/hw/gralloc.sc7710g.so
+lib/hw/hwcomposer.sc7710g.so
 
 # Mali-400
 lib/egl/libEGL_mali.so
@@ -66,8 +66,8 @@ lib/libUMP.so
 
 # Audio
 etc/Volume.db
-lib/hw/audio.primary.sc8810.so
-lib/hw/audio_policy.sc8810.so
+lib/hw/audio.primary.sc7710g.so
+lib/hw/audio_policy.sc7710g.so
 lib/libaudiopolicy_sec.so
 lib/libcontrolcsc.so
 lib/libLifevibes_lvvefs.so
@@ -131,7 +131,7 @@ lib/libengclient.so
 lib/libnvaccessor.so
 
 # Camera
-lib/hw/camera.sc8810.so
+lib/hw/camera.sc7710g.so
 lib/libsecnativefeature.so
 
 # DRM
